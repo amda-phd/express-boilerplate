@@ -2,7 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const errorhandler = require("errorhandler");
 
-const health = require("./routers/health");
+const health = require("Routers/health");
 
 const app = express();
 app.use(express.json());
