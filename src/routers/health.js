@@ -1,17 +1,21 @@
 const { Router } = require("express");
 
 const Health = require("Models/health");
+const Validators = require("Validators/health");
 
 const router = new Router();
 
-router.get("/health", async (req, res) => {
+router.get("/health", Validators.query, async (req, res) => {
   try {
-    await Health.sync({ force: true });
-    const health = await Health.create({ isHealthy: true });
-    return res.send({ api: true, db: health.isHealthy });
+    if (req.query.db) {
+      await Health.sync({ force: true });
+      await Health.create({ isHealthy: true });
+    }
+
+    return res.send(req.query);
   } catch (error) {
     console.log(error);
-    return res.send({ api: true, db: false });
+    return res.send({ api: req.quey.api, db: false });
   }
 });
 
