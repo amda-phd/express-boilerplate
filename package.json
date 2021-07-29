@@ -43,14 +43,12 @@
     "multer": "^1.4.2"
   },
   "_moduleAliases": {
-    "Models": "src/models",
     "Routers": "src/routers",
     "Validators": "src/validators",
     "@app": "src/app.js"
   },
   "jest": {
     "moduleNameMapper": {
-      "Models/(.*)": "<rootDir>/src/models/$1",
       "Routers/(.*)": "<rootDir>/src/routers/$1",
       "Validators/(.*)": "<rootDir>/src/validators/$1",
       "@app": "<rootDir>/src/app.js",
