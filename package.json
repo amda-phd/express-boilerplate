@@ -1,7 +1,7 @@
 {
   "name": "express-boilerplate",
   "version": "1.0.0",
-  "description": "A boilerplate for a simple Express REST API",
+  "description": "A boilerplate for a simple Express REST API with MongoDB integration via Mongoose",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
@@ -19,7 +19,9 @@
     "node.js",
     "javascript",
     "api",
-    "rest"
+    "rest",
+    "mongodb",
+    "mongoose"
   ],
   "author": "amda",
   "license": "MIT",
@@ -39,19 +41,24 @@
     "express": "^4.17.1",
     "express-joi-validation": "^5.0.0",
     "joi": "^17.4.1",
+    "mongoose": "^5.13.4",
     "morgan": "^1.10.0",
     "multer": "^1.4.2"
   },
   "_moduleAliases": {
+    "Models": "src/models",
     "Routers": "src/routers",
     "Validators": "src/validators",
-    "@app": "src/app.js"
+    "@app": "src/app.js",
+    "@DB": "src/db/mongo.js"
   },
   "jest": {
     "moduleNameMapper": {
+      "Models/(.*)": "<rootDir>/src/models/$1",
       "Routers/(.*)": "<rootDir>/src/routers/$1",
       "Validators/(.*)": "<rootDir>/src/validators/$1",
       "@app": "<rootDir>/src/app.js",
+      "@db": "<rootDir>/src/db/mongo.js",
       "src/(.*)": "<rootDir>/src/$1"
     }
   }
