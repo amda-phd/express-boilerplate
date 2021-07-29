@@ -1,9 +1,11 @@
 const { Router } = require("express");
 
+const Validators = require("Validators/health");
+
 const router = new Router();
 
-router.get("/health", (req, res) => {
-  return res.send({ message: "Healthy!" });
+router.get("/health", Validators.query, (req, res) => {
+  return res.send(req.query);
 });
 
 router.get("/ping", (req, res) => {
