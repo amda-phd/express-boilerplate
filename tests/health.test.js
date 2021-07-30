@@ -14,7 +14,7 @@ describe("/health", () => {
     });
 
     describe("&sql=true", () => {
-      it("Also checks the database's status", async (done) => {
+      it("Also checks the SQL database's status", async (done) => {
         await request(app)
           .get("/health?api=true&sql=true")
           .expect(200, { api: true, sql: true });
