@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
 
-const sequelize = require("@DB");
+const sequelize = require("@sql");
 
 const Health = sequelize.define("health", {
   isHealthy: {

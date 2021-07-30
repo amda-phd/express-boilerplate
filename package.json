@@ -53,7 +53,7 @@
     "Models": "src/models",
     "Routers": "src/routers",
     "Validators": "src/validators",
-    "@DB": "src/db/sql.js",
+    "@sql": "src/db/sql.js",
     "@app": "src/app.js"
   },
   "jest": {
@@ -61,7 +61,7 @@
       "Models/(.*)": "<rootDir>/src/models/$1",
       "Routers/(.*)": "<rootDir>/src/routers/$1",
       "Validators/(.*)": "<rootDir>/src/validators/$1",
-      "@DB": "<rootDir>/src/db/sql.js",
+      "@sql": "<rootDir>/src/db/sql.js",
       "@app": "<rootDir>/src/app.js",
       "src/(.*)": "<rootDir>/src/$1"
     }
