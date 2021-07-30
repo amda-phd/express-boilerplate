@@ -2,7 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const errorhandler = require("errorhandler");
 
-require("@DB")();
+require("@mongo")();
 const health = require("Routers/health");
 
 const app = express();

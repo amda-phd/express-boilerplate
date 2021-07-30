@@ -1,7 +1,7 @@
 const request = require("supertest");
 
 const app = require("@app");
-const health = require("Models/health");
+const Health = require("Models/health");
 
 describe("/health", () => {
   it("Returns empty object when called without query", (done) => {
@@ -19,8 +19,8 @@ describe("/health", () => {
           .get("/health?api=true&mongo=true")
           .expect(200, { api: true, mongo: true });
 
-        const health = await Health.find();
-        expect(health[health.length - 1].isHealthy).toBeTruthy(done());
+        const health = await Health.findOne();
+        expect(health.isHealthy).toBeTruthy(done());
       });
     });
   });

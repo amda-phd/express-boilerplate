@@ -50,7 +50,7 @@
     "Routers": "src/routers",
     "Validators": "src/validators",
     "@app": "src/app.js",
-    "@DB": "src/db/mongo.js"
+    "@mongo": "src/db/mongo.js"
   },
   "jest": {
     "moduleNameMapper": {
@@ -58,7 +58,7 @@
       "Routers/(.*)": "<rootDir>/src/routers/$1",
       "Validators/(.*)": "<rootDir>/src/validators/$1",
       "@app": "<rootDir>/src/app.js",
-      "@db": "<rootDir>/src/db/mongo.js",
+      "@mongo": "<rootDir>/src/db/mongo.js",
       "src/(.*)": "<rootDir>/src/$1"
     }
   }

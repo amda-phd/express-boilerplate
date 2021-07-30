@@ -8,7 +8,9 @@ const router = new Router();
 router.get("/health", Validators.query, async (req, res) => {
   try {
     if (req.query.mongo) {
-      const health = await Health.create();
+      await Health.deleteMany();
+      const health = await Health.create({});
+
       if (!health) {
         throw Error();
       }
