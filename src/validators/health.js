@@ -5,7 +5,7 @@ module.exports = {
   query: validator.query(
     Joi.object({
       api: Joi.boolean(),
-      db: Joi.boolean(),
+      sql: Joi.boolean(),
     })
   ),
 };

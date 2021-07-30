@@ -15,7 +15,7 @@ router.get("/health", Validators.query, async (req, res) => {
     return res.send(req.query);
   } catch (error) {
     console.log(error);
-    return res.send({ api: req.quey.api, db: false });
+    return res.send({ api: req.quey.api, sql: false });
   }
 });
 

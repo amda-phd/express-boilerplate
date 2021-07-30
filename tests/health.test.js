@@ -13,11 +13,11 @@ describe("/health", () => {
       request(app).get("/health?api=true").expect(200, { api: true }, done());
     });
 
-    describe("&db=true", () => {
+    describe("&sql=true", () => {
       it("Also checks the database's status", async (done) => {
         await request(app)
-          .get("/health?api=true&db=true")
-          .expect(200, { api: true, db: true });
+          .get("/health?api=true&sql=true")
+          .expect(200, { api: true, sql: true });
         const health = await Health.findAll();
         expect(health[0].isHealthy).toBeTruthy(done());
       });
