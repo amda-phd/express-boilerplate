@@ -1,14 +1,5 @@
 # Express REST API boilerplate
 
-This API has been created using amda's basic boilerplate, which includes:
-
-- Project structure
-- Queryable /health route
-- Basic validation via joi
-- Unit testing suite via Jest
-
-# Express REST API boilerplate
-
 @main
 
 This API has been created using [amda's](https://github.com/amda-phd) basic boilerplate, which includes:
