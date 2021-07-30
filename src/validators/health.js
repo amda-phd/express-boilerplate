@@ -5,6 +5,7 @@ module.exports = {
   query: validator.query(
     Joi.object({
       api: Joi.boolean(),
+      mongo: Joi.boolean(),
     })
   ),
 };
